@@ -15,6 +15,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
+import lombok.ToString.Exclude;
 
 @Entity @Table
 @Data @NoArgsConstructor @AllArgsConstructor @RequiredArgsConstructor
@@ -38,6 +39,7 @@ public class Utilisateur {
 	
 	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "id_role")
+	@Exclude
 	Role role;
 
 }
